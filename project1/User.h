@@ -7,6 +7,12 @@
 #include "Email.h"
 #include "Phone.h"
 
+struct Date {
+    int year;
+    int month;
+    int day;
+};
+
 class User {
 private:
 
@@ -15,16 +21,15 @@ private:
     std::string lastname;
     char gender;
     std::string city;
-    int addedDate;
+    Date addedDate;
     std::vector<Address> addresses;
     std::vector<Phone> phones;
     std::vector<Email> emails;
 
 public:
 
-    User();
-    virtual ~User();
-
+    User(int id, std::string firstname, std::string lastname, char gender, std::string city, Date addedDate,
+          const std::vector<Address>& addresses, const std::vector<Phone>& phones, const std::vector<Email>& emails );
     void search();
     void show();
 

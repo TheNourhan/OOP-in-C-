@@ -12,11 +12,11 @@ private:
 
 public:
 
-    Phone();
-    void setPhone();
-    void setType();
-    void setDescription();
-    std::string get();
+    Phone(std::string phone, std::string type, std::string description);
+    void setPhone(const std::string& new_phone);
+    void setType(const std::string& new_type);
+    void setDescription(const std::string& new_description);
+    std::string get() const;
 
 };
 

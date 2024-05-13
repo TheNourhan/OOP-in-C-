@@ -12,11 +12,11 @@ private:
 
 public:
 
-    Address();
-    void setPlace();
-    void setType();
-    void setDescription();
-    std::string get();
+    Address(std::string place, std::string type, std::string description);
+    void setPlace(const std::string& new_place);
+    void setType(const std::string& new_type);
+    void setDescription(const std::string& new_description);
+    std::string get() const;
 
 };
 

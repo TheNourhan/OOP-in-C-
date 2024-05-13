@@ -12,11 +12,11 @@ private:
 
 public:
 
-    Email();
-    void setEmail();
-    void setType();
-    void setDescription();
-    std::string get();
+    Email(std::string email, std::string type, std::string description);
+    void setEmail(const std::string& new_email);
+    void setType(const std::string& new_type);
+    void setDescription(const std::string& new_description);
+    std::string get() const;
 
 };
 
