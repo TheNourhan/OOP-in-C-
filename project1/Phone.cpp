@@ -1,6 +1,7 @@
 #include "Phone.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 Phone::Phone(string phone, string type, string description) {
@@ -24,9 +25,7 @@ void Phone::setDescription(const string& new_description){
     this->description = new_description;
 }
 
-string Phone::get()const{
-    string details = "number: " + this->phone + "\n";
-    details += "type: " + this->type + "\n";
-    details += "description: " + this->description + "\n";
+vector<string> Phone::get()const{
+    vector<string> details = {this->phone, this->type, this->description};
     return details;
 }

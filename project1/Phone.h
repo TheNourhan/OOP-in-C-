@@ -2,6 +2,7 @@
 #define PHONE_H_INCLUDED
 
 #include <string>
+#include <vector>
 
 class Phone{
 private:
@@ -16,7 +17,7 @@ public:
     void setPhone(const std::string& new_phone);
     void setType(const std::string& new_type);
     void setDescription(const std::string& new_description);
-    std::string get() const;
+    std::vector<std::string> get() const;
 
 };
 

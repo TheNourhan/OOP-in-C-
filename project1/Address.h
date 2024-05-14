@@ -2,6 +2,7 @@
 #define ADDRESS_H_INCLUDED
 
 #include <string>
+#include <vector>
 
 class Address{
 private:
@@ -16,7 +17,7 @@ public:
     void setPlace(const std::string& new_place);
     void setType(const std::string& new_type);
     void setDescription(const std::string& new_description);
-    std::string get() const;
+    std::vector<std::string> get() const;
 
 };
 

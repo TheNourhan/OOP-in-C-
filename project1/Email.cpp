@@ -1,6 +1,7 @@
 #include "Email.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 Email::Email(string email, string type, string description){
@@ -24,10 +25,8 @@ void Email::setDescription(const string& new_description){
     this->description = new_description;
 }
 
-string Email::get()const{
-    string details = "email: " + this->email + "\n";
-    details += "type: " + this->type + "\n";
-    details += "description: " + this->description + "\n";
+vector<string> Email::get()const{
+    vector<string> details = {this->email, this->type, this->description};
     return details;
 }
 

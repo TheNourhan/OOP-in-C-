@@ -2,6 +2,7 @@
 #define EMAIL_H_INCLUDED
 
 #include <string>
+#include <vector>
 
 class Email{
 private:
@@ -16,7 +17,7 @@ public:
     void setEmail(const std::string& new_email);
     void setType(const std::string& new_type);
     void setDescription(const std::string& new_description);
-    std::string get() const;
+    std::vector<std::string> get() const;
 
 };
 

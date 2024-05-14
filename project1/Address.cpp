@@ -1,6 +1,7 @@
 #include "Address.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 Address::Address(string place, string type, string description){
@@ -24,9 +25,7 @@ void Address::setDescription(const string& new_description){
     this->description = new_description;
 }
 
-string Address::get() const{
-    string details = "address: " + this->place + "\n";
-    details += "type: " + this->type + "\n";
-    details += "description: " + this->description + "\n";
+vector<string> Address::get()const{
+    vector<string> details = {this->place, this->type, this->description};
     return details;
 }

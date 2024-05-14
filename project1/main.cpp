@@ -1,8 +1,5 @@
 #include <iostream>
-#include "Phone.h"
-#include "Email.h"
-#include "Address.h"
-#include "User.h"
+#include "Contact.h"
 
 using namespace std;
 
