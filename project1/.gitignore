@@ -8,6 +8,7 @@ x64
 *~
 *.cbp
 *.depend
+*.layout
 
 **/.deps/
 **/.dirstamp

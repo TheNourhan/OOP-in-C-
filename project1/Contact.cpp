@@ -14,6 +14,39 @@ void Contact::AddUser(const int& id, const string& firstname, const string& last
     count++;
 }
 
+void Contact::AddPhoneNumber(const std::string& name, const std::string& phone, const std::string& type, const std::string& description) {
+    for (User& user : users) {
+        if (user.get_firstname() == name || user.get_lastname() == name) {
+            user.add_phone(phone, type, description);
+            cout << "Phone number added for " << name << endl;
+            return;
+        }
+    }
+    cout << "User not found." << endl;
+}
+
+void Contact::AddAddress(const std::string& name, const std::string& address, const std::string& type, const std::string& description) {
+    for (User& user : users) {
+        if (user.get_firstname() == name || user.get_lastname() == name) {
+            user.add_address(address, type, description);
+            cout << "Address added for " << name << endl;
+            return;
+        }
+    }
+    cout << "User not found." << endl;
+}
+
+void Contact::AddEmail(const std::string& name, const std::string& email, const std::string& type, const std::string& description) {
+    for (User& user : users) {
+        if (user.get_firstname() == name || user.get_lastname() == name) {
+            user.add_email(email, type, description);
+            cout << "Email added for " << name << endl;
+            return;
+        }
+    }
+    cout << "User not found." << endl;
+}
+
 void Contact::EditUser(const std::string& old_value, const std::string& new_value, const std::string& type) {
     for (User& user : users) {
         if (type == "firstname" && user.get_firstname() == old_value) {
